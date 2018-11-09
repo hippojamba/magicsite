@@ -2,3 +2,10 @@ baseurl = "https://hippojamba.github.io/"
 languageCode = "en-us"
 title = "Nest"
 theme = "tale"
+paginate = 10
+
+[params]
+    author = "Oliver"
+
+[Author]
+    name = "hippojamba"
