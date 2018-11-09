@@ -46,3 +46,8 @@ To create a new post run `hugo new posts/some-name.md`, the new post will be pla
 To test your site locally we want to start a local server, we do this by running the following command `hugo server -t tale`.
 
 _Note: If your some-name.md post have the 'draft = true' set it will not appear._
+
+## Deploy
+Create a new repository named [USERNAME].github.io, this is where you site will be hosted. In your respository where your hugo site is installed you can remove your public folder with `rm -rf public` and then add the submodule to your site repository with `git submodule add -f https://github.com/[USERNAME]/[USERNAME].github.io.git public`.
+
+To build your site run `hugo -t tale`, where "tale" being the name of the theme. Navigate to your public folder, add all files, commit and push. 
