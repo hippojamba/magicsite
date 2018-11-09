@@ -7,7 +7,9 @@ summary = "Guide to get you started with a free static webpage using Hugo and Gi
 # Free static site using Hugo and Github pages
 ------
 This is a guide to get you started with a free static webpage using Hugo and Github pages. 
-
+<br />
+<br />
+<br />
 ## Prerequisites
 ------
 * Github account
@@ -22,7 +24,9 @@ _Note: For the theme [Tale](https://github.com/EmielH/tale-hugo) we need the ext
 Start by downloading the latest hugo package `wget https://github.com/gohugoio/hugo/releases/download/v0.50/hugo_extended_0.50_Linux-64bit.deb`
  
 Install the downloaded package `sudo dpkg -i hugo_extended_0.50_Linux-64bit.deb`. If the latest version isn't "0.50" just replace it with the latest version number.
-
+<br />
+<br />
+<br />
 ## Setup
 ------
 Create a repository on github.com to hold the source files, this is where you will be creating content, configure your site, add/edit posts, etc. Clone your repository and run the following commands.
@@ -36,18 +40,28 @@ Add the [Tale](https://github.com/EmielH/tale-hugo) theme to your site.
 `git submodule add https://github.com/EmielH/tale-hugo`
 
 Tell Hugo to use the theme Tale `echo 'theme = "tale"' >> config.toml`
-
+<br />
+<br />
+<br />
 ## Create a post
 ------
 To create a new post run `hugo new posts/some-name.md`, the new post will be placed in the posts folder inside the content folder which is placed in the root.
-
+<br />
+<br />
+<br />
 ## Run locally
 ------
 To test your site locally we want to start a local server, we do this by running the following command `hugo server -t tale`.
 
-_Note: If your some-name.md post have the 'draft = true' set it will not appear._
-
+ Note: If your some-name.md post have the 'draft = true' set it will not appear.
+<br />
+<br />
+<br />
 ## Deploy
-Create a new repository named [USERNAME].github.io, this is where you site will be hosted. In your respository where your hugo site is installed you can remove your public folder with `rm -rf public` and then add the submodule to your site repository with `git submodule add -f https://github.com/[USERNAME]/[USERNAME].github.io.git public`.
+------
+Create a new repository named [USERNAME].github.io, this is where your site will be hosted. In your respository where your hugo site is installed you can remove your public folder with `rm -rf public` and then add the submodule to your site repository with `git submodule add -f https://github.com/[USERNAME]/[USERNAME].github.io.git public`.
 
 To build your site run `hugo -t tale`, where "tale" being the name of the theme. Navigate to your public folder, add all files, commit and push. 
+<br />
+<br />
+<br />
