@@ -65,3 +65,9 @@ To build your site run `hugo -t tale`, where "tale" being the name of the theme.
 <br />
 <br />
 <br />
+## Configuration
+------
+To alter the footer navigate to themes/[theme]/layouts/partials and open footer.html, when you do changes in here it will only appear locally if the theme is used with submodules.
+<br />
+<br />
+<br />
