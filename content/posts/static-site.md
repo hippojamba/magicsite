@@ -59,15 +59,25 @@ To test your site locally we want to start a local server, we do this by running
 <br />
 ## Deploy
 ------
-Create a new repository named [USERNAME].github.io, this is where your site will be hosted. In your respository where your hugo site is installed you can remove your public folder with `rm -rf public` and then add the submodule to your site repository with `git submodule add -f https://github.com/[USERNAME]/[USERNAME].github.io.git public`.
+Create a new repository and name it `[username].github.io`, this is where your site will be hosted. 
 
-To build your site run `hugo -t tale`, where "tale" being the name of the theme. Navigate to your public folder, add all files, commit and push. 
+In your respository where your hugo site is installed you can remove your public folder with `rm -rf public`
+
+When the public folder has been removed we want to add the submodule to your sitename repository and bind it to the public folder by running:
+`git submodule add -f https://github.com/[username]/[username].github.io.git public`
+
+To build your site run `hugo -t tale`, where "tale" being the name of the theme. Your `public` folder should now be filled with a generated site, navigate to it and run the following commands to publish the site i.e. pushing `public` to the `[username].github.io` repository: <br />
+`git add .` <br />
+`git commit -m "some message"` <br />
+`git push`
 <br />
 <br />
 <br />
 ## Configuration
 ------
-To alter the footer navigate to themes/[theme]/layouts/partials and open footer.html, when you do changes in here it will only appear locally if the theme is used with submodules.
+To alter the for example the footer we navigate to `themes/[theme]/layouts/partials` and open footer.html.
+
+_Note: When you do changes in here it will only appear locally if the theme is used with submodules. By adding `ignore = dirty` setting to `.gitmodules` will ignore the change and it will not be displayed when running `git status`_
 <br />
 <br />
 <br />
