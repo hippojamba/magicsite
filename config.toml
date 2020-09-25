@@ -1,11 +1,11 @@
-baseurl = "https://hippojamba.github.io/"
+baseurl = "https://oliversabler.github.io/"
 languageCode = "en-us"
 title = "Nest"
 theme = "tale"
 paginate = 10
 
 [params]
-    author = "Oliver"
+    author = "Oliver Sabler"
 
 [Author]
-    name = "hippojamba"
+    name = "Oliver Sabler"
