@@ -1,7 +1,7 @@
 [submodule "themes/tale"]
 	path = themes/tale
 	url = https://github.com/EmielH/tale-hugo.git
-    ignore = dirty
+  ignore = dirty
 [submodule "public"]
 	path = public
 	url = https://github.com/hippojamba/hippojamba.github.io.git
