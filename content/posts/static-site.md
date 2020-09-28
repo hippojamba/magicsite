@@ -1,5 +1,5 @@
 +++
-date = "2018-10-31T08:48:23+01:00"
+date = "2020-09-28"
 draft = false
 title = "Free static site using Hugo and Github pages"
 summary = "Guide to get you started with a free static webpage using Hugo and Github pages."
@@ -16,14 +16,16 @@ This is a guide to get you started with a free static webpage using Hugo and Git
 * Git version 2.8 or higher
 * Latest version of Hugo
 
-Ubuntus repos for Hugo is maintained by Canonical and will provied you with an outdated version, therefore we will do this manually.
-
-_Note: For the theme [Tale](https://github.com/EmielH/tale-hugo) we need the extended version of Hugo._
-
 ### Download the latest Hugo package
+#### Ubuntu
+Ubuntus repos for Hugo is maintained by Canonical and will provied you with an outdated version, therefore we need to install it manually.
+
 Start by downloading the latest hugo package `wget https://github.com/gohugoio/hugo/releases/download/v0.50/hugo_extended_0.50_Linux-64bit.deb`
  
 Install the downloaded package `sudo dpkg -i hugo_extended_0.50_Linux-64bit.deb`. If the latest version isn't "0.50" just replace it with the latest version number.
+
+#### Mac
+Install [brew](https://brew.sh/) and run `brew install hugo` to install Hugo.
 <br />
 <br />
 <br />
@@ -35,11 +37,11 @@ Initiate a new site `hugo new site [sitename]`
 
 Move files from [sitename] folder to the repository root `cp -a [sitename]/. .`
 
-Add the [Tale](https://github.com/EmielH/tale-hugo) theme to your site.
+Clone the [Cactus](https://github.com/monkeyWzr/hugo-theme-cactus) theme to your site.
 
-`git submodule add https://github.com/EmielH/tale-hugo`
+`git clone https://github.com/monkeyWzr/hugo-theme-cactus.git themes/cactus`
 
-Tell Hugo to use the theme Tale `echo 'theme = "tale"' >> config.toml`
+Tell Hugo to use the theme Tale `echo 'theme = "cactus"' >> config.toml`
 <br />
 <br />
 <br />
@@ -66,18 +68,10 @@ In your respository where your hugo site is installed you can remove your public
 When the public folder has been removed we want to add the submodule to your sitename repository and bind it to the public folder by running:
 `git submodule add -f https://github.com/[username]/[username].github.io.git public`
 
-To build your site run `hugo -t tale`, where "tale" being the name of the theme. Your `public` folder should now be filled with a generated site, navigate to it and run the following commands to publish the site i.e. pushing `public` to the `[username].github.io` repository: <br />
+To build your site run `hugo -t cactus`, where "tale" being the name of the theme. Your `public` folder should now be filled with a generated site, navigate to it and run the following commands to publish the site i.e. pushing `public` to the `[username].github.io` repository: <br />
 `git add .` <br />
 `git commit -m "some message"` <br />
 `git push`
-<br />
-<br />
-<br />
-## Configuration
-------
-To alter the for example the footer we navigate to `themes/[theme]/layouts/partials` and open footer.html.
-
-_Note: When you do changes in here it will only appear locally if the theme is used with submodules. By adding `ignore = dirty` setting to `.gitmodules` will ignore the change and it will not be displayed when running `git status`_
 <br />
 <br />
 <br />
