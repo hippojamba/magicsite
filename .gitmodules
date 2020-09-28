@@ -2,3 +2,6 @@
 	path = tale-hugo
 	url = https://github.com/EmielH/tale-hugo
   ignore = dirty
+[submodule "public"]
+	path = public
+	url = https://github.com/oliversabler/oliversabler.github.io.git
