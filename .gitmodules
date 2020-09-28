@@ -1,0 +1,4 @@
+[submodule "tale-hugo"]
+	path = tale-hugo
+	url = https://github.com/EmielH/tale-hugo
+  ignore = dirty
