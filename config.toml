@@ -1,11 +1,13 @@
 baseurl = "https://oliversabler.github.io/"
 languageCode = "en-us"
 title = "Nest"
-theme = "tale"
+theme = "cactus"
 paginate = 10
+disableKinds = ['taxonomyTerm']
 
 [params]
     author = "Oliver Sabler"
 
 [Author]
     name = "Oliver Sabler"
+
