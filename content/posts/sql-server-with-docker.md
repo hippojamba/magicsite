@@ -5,8 +5,6 @@ date: 2021-07-01
 draft: false
 ---
 
-# Working with SQL Server in Docker
-
 ## Introduction
 Working with SQL Server in Docker have several benfits. It's extremely fast to get up and running, we basically type one command with some environment variables and we are up and running. It's cross-plattform, so doesn't matter if your team mates are working in Linux, MacOS, Windows or any other OS. We can skip writing a long step-by-step readme of how to setup the server by providing a Dockerfile. If we want to create some integrationtests we can spin up a SQL Server run tests against it and tear it down in matter of seconds, why not go further and automate the process in our CI/CD workflow? And this is just to mention a few.
 
