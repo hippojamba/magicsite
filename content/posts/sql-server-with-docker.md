@@ -8,7 +8,7 @@ draft: false
 ## Introduction
 Working with SQL Server in Docker have several benfits. It's extremely fast to get up and running, we basically type one command with some environment variables and we are up and running. It's cross-plattform, so doesn't matter if your team mates are working in Linux, MacOS, Windows or any other OS. We can skip writing a long step-by-step readme of how to setup the server by providing a Dockerfile. If we want to create some integrationtests we can spin up a SQL Server run tests against it and tear it down in matter of seconds, why not go further and automate the process in our CI/CD workflow? And this is just to mention a few.
 
-In this article we will start with exploring the basics; how to get SQL Server running in Docker. You will learn how to create and connect to a database, create a table and insert some data into it and then get a vizualization of the values inside the table. Everything will be done manually through the CLI.
+In this article we will start with exploring the basics; how to get SQL Server running in Docker. You will learn how to create and connect to a database, create a table and insert some data into it and then get a vizualization of the values inside the table. Everything will be done manually using your shell of choice.
 
 ## Docker
 First off we need a SQL Server running in Docker for our project. We can do this with one line, so type the following command into your terminal to run the mssql container.
@@ -30,7 +30,7 @@ With `-e` we can set local environment variables.
 The last parameter we us is the Docker image `mcr.microsoft.com/mssql/server:latest`, if you desire a different version you can find what versions are available (here)[https://hub.docker.com/_/microsoft-mssql-server]
 
 ## Testing the mssql container manually
-To test the container we can create a database and table manually through the CLI. To run an interactive bash shell inside our **my-test-container** container we run `sudo docker exec -it my-test-container "bash"` in the terminal. `-it` is the shorthand options of `--interactive` and `--tty` combined, more about what they mean can be found [here](https://docs.docker.com/engine/reference/commandline/exec/).
+To test the container we can create a database and table manually through the **sqlcmd**. But first we must run an interactive bash shell inside our **my-test-container** container we run `sudo docker exec -it my-test-container "bash"` in the terminal. `-it` is the shorthand options of `--interactive` and `--tty` combined, more about what they mean can be found [here](https://docs.docker.com/engine/reference/commandline/exec/).
 
 When we have a shell inside the container we can run the **sqlcmd** with the command below.
 ```bash
@@ -73,4 +73,4 @@ id          name                                               stock
           2 Trocadero                                                   30
 ```
 
-To exit the CLI just type `exit` and press enter.
+To exit the **sqlcmd** just type `exit` and press enter.
