@@ -1,6 +1,7 @@
 ---
 title: "Working with SQL Server in Docker"
-date: 2021-06-24T16:52:31+02:00
+summary: "Guide to get you started with SQL Server using Docker."
+date: 2021-07-01
 draft: false
 ---
 

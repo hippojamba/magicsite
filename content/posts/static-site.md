@@ -1,15 +1,13 @@
-+++
-date = "2020-09-28"
-draft = false
-title = "Free static site using Hugo and Github pages"
-summary = "Guide to get you started with a free static webpage using Hugo and Github pages."
-+++
-# Free static site using Hugo and Github pages
-------
+---
+title: "Free static site using Hugo and Github pages"
+summary: "Guide to get you started with a free static webpage using Hugo and Github pages."
+date: 2020-09-28
+draft: false
+---
+
+## Introduction
 This is a guide to get you started with a free static webpage using Hugo and Github pages. 
-<br />
-<br />
-<br />
+
 ## Prerequisites
 ------
 * Github account
@@ -41,7 +39,7 @@ Clone the [Cactus](https://github.com/monkeyWzr/hugo-theme-cactus) theme to your
 
 `git clone https://github.com/monkeyWzr/hugo-theme-cactus.git themes/cactus`
 
-Tell Hugo to use the theme Tale `echo 'theme = "cactus"' >> config.toml`
+Tell Hugo to use the theme Cactus `echo 'theme = "cactus"' >> config.toml`
 <br />
 <br />
 <br />
@@ -53,7 +51,7 @@ To create a new post run `hugo new posts/some-name.md`, the new post will be pla
 <br />
 ## Run locally
 ------
-To test your site locally we want to start a local server, we do this by running the following command `hugo server -t tale`.
+To test your site locally we want to start a local server, we do this by running the following command `hugo server -t cactus`.
 
  Note: If your some-name.md post have the 'draft = true' set it will not appear.
 <br />
@@ -68,7 +66,7 @@ In your respository where your hugo site is installed you can remove your public
 When the public folder has been removed we want to add the submodule to your sitename repository and bind it to the public folder by running:
 `git submodule add -f https://github.com/[username]/[username].github.io.git public`
 
-To build your site run `hugo -t cactus`, where "tale" being the name of the theme. Your `public` folder should now be filled with a generated site, navigate to it and run the following commands to publish the site i.e. pushing `public` to the `[username].github.io` repository: <br />
+To build your site run `hugo -t cactus`, where "cactus" being the name of the theme. Your `public` folder should now be filled with a generated site, navigate to it and run the following commands to publish the site i.e. pushing `public` to the `[username].github.io` repository: <br />
 `git add .` <br />
 `git commit -m "some message"` <br />
 `git push`
