@@ -30,9 +30,14 @@ With `-e` we can set local environment variables.
 The last parameter we us is the Docker image `mcr.microsoft.com/mssql/server:latest`, if you desire a different version you can find what versions are available (here)[https://hub.docker.com/_/microsoft-mssql-server]
 
 ## Testing the mssql container manually
-To test the container we can create a database and table manually through the CLI. To run an interactive bash shell inside our **my-test-container** container we run `sudo docker exec -it my-test-container "bash"` in the terminal. `-it` is `-i` and `-t` combined, more about what they mean can be found [here](https://docs.docker.com/engine/reference/commandline/exec/).
+To test the container we can create a database and table manually through the CLI. To run an interactive bash shell inside our **my-test-container** container we run `sudo docker exec -it my-test-container "bash"` in the terminal. `-it` is the shorthand options of `--interactive` and `--tty` combined, more about what they mean can be found [here](https://docs.docker.com/engine/reference/commandline/exec/).
 
-When we have a shell inside the container we can connect to the **sqlcmd** by running this command: `/opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P "AsomewhatSTRONGpw10€"`. Now we can start typing some SQL commands.
+When we have a shell inside the container we can run the **sqlcmd** with the command below.
+```bash
+/opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P "AsomewhatSTRONGpw10€"
+```
+
+Now the **sqlcmd** is running and we can start typing some SQL commands.
 
 Let's create the database:
 ```sql
