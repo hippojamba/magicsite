@@ -11,16 +11,23 @@ Working with SQL Server in Docker have several benfits. It's extremely fast to g
 In this article we will start with exploring the basics; how to get SQL Server running in Docker. You will learn how to create and connect to a database, create a table and insert some data into it and then get a vizualization of the values inside the table. Everything will be done manually through the CLI.
 
 ## Docker
-First off we need a SQL Server running in Docker for our project. Type the following command into your terminal to run the mssql container `docker run -d --name my-test-container -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=AsomewhatSTRONGpw10€' -p 1433:1433 mcr.microsoft.com/mssql/server:latest`.
+First off we need a SQL Server running in Docker for our project. We can do this with one line, so type the following command into your terminal to run the mssql container.
+```bash
+docker run -d --name my-test-container -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=AsomewhatSTRONGpw10€' -p 1433:1433 mcr.microsoft.com/mssql/server:latest
+```
 
 ### Breaking down the command we just ran:
-* Detached mode or `-d`, lets us run our container in the background. 
-* `--name my-test-container` is the name of the container, feel free to change `my-test-container` with your name of choice if you want.
-* With `-e` we can set local environment variables. 
-    * Setting `'ACCEPT_EULA=Y'` variable to `Y` to confirm our acceptance of the End-User Licensing Agreement. This is required setting for the SQL Server image.
-    * We also need to set a password for the system administrator user `sa`, and we do this by adding `'SA_PASSWORD=AsomewhatSTRONGpw10€'`, you can change `AsomewhatSTRONGpw10€` with a strong password of your choice as well. 
-* `-p` is specifying the port we are going to use, in our case `1433:1433` which is commonly used for a SQL Database engine.
-* The last parameter we us is the Docker image `mcr.microsoft.com/mssql/server:latest`, if you desire a different version you can find what versions are available (here)[https://hub.docker.com/_/microsoft-mssql-server]
+Detached mode or `-d`, lets us run our container in the background. 
+
+`--name my-test-container` is the name of the container, feel free to change `my-test-container` with your name of choice if you want.
+
+With `-e` we can set local environment variables. 
+* Setting `'ACCEPT_EULA=Y'` variable to `Y` to confirm our acceptance of the End-User Licensing Agreement. This is required setting for the SQL Server image.
+* We also need to set a password for the system administrator user `sa`, and we do this by adding `'SA_PASSWORD=AsomewhatSTRONGpw10€'`, you can change `AsomewhatSTRONGpw10€` with a strong password of your choice as well. 
+
+`-p` is specifying the port we are going to use, in our case `1433:1433` which is commonly used for a SQL Database engine.
+
+The last parameter we us is the Docker image `mcr.microsoft.com/mssql/server:latest`, if you desire a different version you can find what versions are available (here)[https://hub.docker.com/_/microsoft-mssql-server]
 
 ## Testing the mssql container manually
 To test the container we can create a database and table manually through the CLI. To run an interactive bash shell inside our **my-test-container** container we run `sudo docker exec -it my-test-container "bash"` in the terminal. `-it` is `-i` and `-t` combined, more about what they mean can be found [here](https://docs.docker.com/engine/reference/commandline/exec/).

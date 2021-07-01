@@ -40,23 +40,17 @@ Clone the [Cactus](https://github.com/monkeyWzr/hugo-theme-cactus) theme to your
 `git clone https://github.com/monkeyWzr/hugo-theme-cactus.git themes/cactus`
 
 Tell Hugo to use the theme Cactus `echo 'theme = "cactus"' >> config.toml`
-<br />
-<br />
-<br />
+
 ## Create a post
 ------
 To create a new post run `hugo new posts/some-name.md`, the new post will be placed in the posts folder inside the content folder which is placed in the root.
-<br />
-<br />
-<br />
+
 ## Run locally
 ------
 To test your site locally we want to start a local server, we do this by running the following command `hugo server -t cactus`.
 
  Note: If your some-name.md post have the 'draft = true' set it will not appear.
-<br />
-<br />
-<br />
+
 ## Deploy
 ------
 Create a new repository and name it `[username].github.io`, this is where your site will be hosted. 
@@ -66,10 +60,10 @@ In your respository where your hugo site is installed you can remove your public
 When the public folder has been removed we want to add the submodule to your sitename repository and bind it to the public folder by running:
 `git submodule add -f https://github.com/[username]/[username].github.io.git public`
 
-To build your site run `hugo -t cactus`, where "cactus" being the name of the theme. Your `public` folder should now be filled with a generated site, navigate to it and run the following commands to publish the site i.e. pushing `public` to the `[username].github.io` repository: <br />
-`git add .` <br />
-`git commit -m "some message"` <br />
-`git push`
-<br />
-<br />
-<br />
+To build your site run `hugo -t cactus`, where "cactus" being the name of the theme. Your `public` folder should now be filled with a generated site, navigate to it and run the following commands to publish the site i.e. pushing `public` to the `[username].github.io` repository:
+
+```bash
+git add .
+git commit -m "some message"
+git push
+```
