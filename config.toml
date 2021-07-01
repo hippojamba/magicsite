@@ -4,9 +4,11 @@ title = "Nest"
 theme = "cactus"
 paginate = 10
 disableKinds = ['taxonomyTerm']
+googleAnalytics = "G-2JHWLJYCQH"
 
 [params]
     author = "Oliver Sabler"
+
 
 [Author]
     name = "Oliver Sabler"
